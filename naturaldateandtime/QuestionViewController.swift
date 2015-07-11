@@ -2,6 +2,7 @@ import UIKit
 
 class QuestionViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet weak var answerTextView: UITextView!
     @IBOutlet weak var questionConstraint: NSLayoutConstraint!
     @IBOutlet weak var outerQuestionTextView: UITextView!
     @IBOutlet weak var questionTextView: UITextView!
@@ -35,16 +36,15 @@ class QuestionViewController: UIViewController, UITextViewDelegate {
     }
     
     func textViewDidChange(textView: UITextView) {
-        self.realignElements()
+        //self.realignElements()
+        self.answerTextView.text = self.answerTextView.text + "Blah"
     }
     
     func realignElements(){
-        var current = self.questionConstraint.constant
-        println(current)
-        self.questionConstraint.constant = self.questionTextView.sizeThatFits(CGSizeMake(self.questionTextView.frame.size.width, CGFloat.max)).height
-        //self.questionConstraint.constant = [textView sizeThatFits:CGSizeMake(textView.frame.size.width, CGFLOAT_MAX)].height
-        self.questionTextView.layoutIfNeeded()
-        self.questionTextView.updateConstraints()
+        //var current = self.questionConstraint.constant
+        //self.questionConstraint.constant = self.questionTextView.sizeThatFits(CGSizeMake(self.questionTextView.frame.size.width, CGFloat.max)).height
+        //self.questionTextView.layoutIfNeeded()
+        //self.questionTextView.updateConstraints()
         
         //self.questionTextViewHeightConstraint.constant = current + 5
         
