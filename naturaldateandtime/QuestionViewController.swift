@@ -1,46 +1,57 @@
-//
-//  ViewController.swift
-//  naturaldateandtime
-//
-//  Created by Darko Sancanin on 11/07/2015.
-//  Copyright (c) 2015 darkosancanin.com. All rights reserved.
-//
-
 import UIKit
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: UIViewController, UITextViewDelegate {
 
-    @IBOutlet weak var TestLabel: UILabel!
+    @IBOutlet weak var questionConstraint: NSLayoutConstraint!
+    @IBOutlet weak var outerQuestionTextView: UITextView!
+    @IBOutlet weak var questionTextView: UITextView!
+    //var questionTextViewHeightConstraint:NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        TestLabel.text = "Blah Blah blah"
-        
-        //UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
-        //[infoButton addTarget:self action:@selector(infoButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-        //UIBarButtonItem *infoButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
-        //self.navigationItem.rightBarButtonItem = infoButtonItem;
-        //[infoButton release];
-        
-        //let infoButton: UIButton = UIButton.buttonWithType(UIButtonType.InfoLight) as! UIButton
-        //infoButton.frame = CGRectMake(0, 0, 40, 40)
-        //infoButton.addTarget(self, action: "rightNavItemEditClick", forControlEvents: UIControlEvents.TouchUpInside)
-        //var rightBarButtonInfoButton: UIBarButtonItem = UIBarButtonItem(customView: infoButton)
-        //self.navigationItem.setRightBarButtonItem(rightBarButtonInfoButton, animated: false)
+        self.setUpQuestionTextView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func rightNavItemEditClick(sender:UIButton!)
-    {
-        self.performSegueWithIdentifier("AboutSegue", sender: nil)
-        println("rightNavItemEditClick")
+    func setUpQuestionTextView() {
+        self.questionTextView.scrollEnabled = false
+        self.outerQuestionTextView.scrollEnabled = false
+        self.questionTextView.delegate = self
+        self.questionTextView.layer.cornerRadius = 5;
+        self.questionTextView.layer.borderWidth = 0;
+        self.outerQuestionTextView.layer.cornerRadius = 5;
+        self.outerQuestionTextView.layer.borderWidth = 2;
+        self.outerQuestionTextView.layer.borderColor = UIColor(red: 167, green: 167, blue: 167, alpha: 1).CGColor
+        self.outerQuestionTextView.layer.shadowColor = UIColor.grayColor().CGColor
+        self.outerQuestionTextView.layer.shadowOffset = CGSizeZero;
+        self.outerQuestionTextView.layer.shadowRadius = 4;
+        self.outerQuestionTextView.layer.shadowOpacity = 0.6;
+        self.questionTextView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        //self.questionTextViewHeightConstraint = NSLayoutConstraint(item: self.questionTextView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 0, constant: 300)
+        //self.view.addConstraint(self.questionTextViewHeightConstraint)
     }
-
-
+    
+    func textViewDidChange(textView: UITextView) {
+        self.realignElements()
+    }
+    
+    func realignElements(){
+        var current = self.questionConstraint.constant
+        println(current)
+        self.questionConstraint.constant = self.questionTextView.sizeThatFits(CGSizeMake(self.questionTextView.frame.size.width, CGFloat.max)).height
+        //self.questionConstraint.constant = [textView sizeThatFits:CGSizeMake(textView.frame.size.width, CGFLOAT_MAX)].height
+        self.questionTextView.layoutIfNeeded()
+        self.questionTextView.updateConstraints()
+        
+        //self.questionTextViewHeightConstraint.constant = current + 5
+        
+        
+        //var questionContentHeight = questionTextView.contentSize.height;
+        //self.questionTextView.frame = CGRectMake(self.questionTextView.frame.origin.x, self.questionTextView.frame.origin.y, self.questionTextView.frame.size.width, questionContentHeight)
+        //self.outerQuestionTextView.frame = CGRectMake(self.outerQuestionTextView.frame.origin.x, self.outerQuestionTextView.frame.origin.y, self.outerQuestionTextView.frame.size.width, questionContentHeight)
+    }
 }
 

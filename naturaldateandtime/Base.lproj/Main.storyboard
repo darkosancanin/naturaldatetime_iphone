@@ -16,14 +16,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36Q-JE-xuA">
-                                <rect key="frame" x="46" y="244" width="208" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a13-sG-Ody">
+                                <rect key="frame" x="28" y="282" width="280" height="56"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.92549019610000005" blue="0.53333333329999999" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="In Sydney, New South Wales, Australia the time 2:30am..." translatesAutoresizingMaskIntoConstraints="NO" id="WfH-Wf-COA">
+                                <rect key="frame" x="77" y="282" width="225" height="61"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="powered by naturaldateandtime.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XGB-ta-had">
+                                <rect key="frame" x="56" y="364" width="200" height="20"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="12"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" editable="NO" text="The current time in Chicago, Illinois is 10am on the 1st of June 2012." translatesAutoresizingMaskIntoConstraints="NO" id="ah0-JH-lGV">
+                                <rect key="frame" x="23" y="190" width="290" height="89"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xak-w4-nwa">
+                                <rect key="frame" x="133" y="152" width="146" height="30"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
+                                <state key="normal" title="example questions &gt;&gt;">
+                                    <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.31711296979999998" green="0.49247880550000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Yur-1O-inq" kind="show" identifier="ExampleSegue" id="Xx9-fW-vgj"/>
+                                </connections>
+                            </button>
+                            <textView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Outer Question Text View" translatesAutoresizingMaskIntoConstraints="NO" id="PKe-zc-bSa">
+                                <rect key="frame" x="175" y="72" width="290" height="162"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" text="What time is it in Chicago when it is 9am in Paris?" translatesAutoresizingMaskIntoConstraints="NO" id="zBb-ji-Z6w">
+                                <rect key="frame" x="0.0" y="80" width="257" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="257" id="DUk-jb-5GU"/>
+                                    <constraint firstAttribute="height" constant="64" id="OEy-cG-bK9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="baa-dh-Eru">
                         <barButtonItem key="rightBarButtonItem" id="Yly-wY-gwr">
@@ -40,12 +89,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="TestLabel" destination="36Q-JE-xuA" id="87j-2T-kqW"/>
+                        <outlet property="outerQuestionTextView" destination="PKe-zc-bSa" id="Pmf-ZX-Jjm"/>
+                        <outlet property="questionConstraint" destination="OEy-cG-bK9" id="mE5-Lb-2om"/>
+                        <outlet property="questionTextView" destination="zBb-ji-Z6w" id="beG-mZ-Srt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="379"/>
+            <point key="canvasLocation" x="1268" y="315"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="j0i-C9-a3p">
@@ -71,7 +122,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTT-jO-DyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002" y="338"/>
+            <point key="canvasLocation" x="1988" y="-22"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kgm-O0-UxA">
+            <objects>
+                <viewController id="Yur-1O-inq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Djx-Hk-YJb"/>
+                        <viewControllerLayoutGuide type="bottom" id="vCH-WF-oof"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qny-Up-cI9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Examples" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFa-F7-go7">
+                                <rect key="frame" x="85" y="179" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xwg-cg-JxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1968" y="703"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xhQ-DQ-6gb">
@@ -89,7 +166,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irO-vz-UcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1082" y="1110"/>
+            <point key="canvasLocation" x="484" y="315"/>
         </scene>
     </scenes>
 </document>
