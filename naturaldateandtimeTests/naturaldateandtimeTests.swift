@@ -2,7 +2,7 @@
 //  naturaldateandtimeTests.swift
 //  naturaldateandtimeTests
 //
-//  Created by Darko Sancanin on 5/07/2015.
+//  Created by Darko Sancanin on 11/07/2015.
 //  Copyright (c) 2015 darkosancanin.com. All rights reserved.
 //
 

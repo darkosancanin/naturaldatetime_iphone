@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C75990C1B48BAC2009C7CCB"
+               BlueprintIdentifier = "0C9397211B50D549006993A9"
                BuildableName = "naturaldateandtime.app"
                BlueprintName = "naturaldateandtime"
                ReferencedContainer = "container:naturaldateandtime.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C7599251B48BAC3009C7CCB"
+               BlueprintIdentifier = "0C9397361B50D549006993A9"
                BuildableName = "naturaldateandtimeTests.xctest"
                BlueprintName = "naturaldateandtimeTests"
                ReferencedContainer = "container:naturaldateandtime.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C7599251B48BAC3009C7CCB"
+               BlueprintIdentifier = "0C9397361B50D549006993A9"
                BuildableName = "naturaldateandtimeTests.xctest"
                BlueprintName = "naturaldateandtimeTests"
                ReferencedContainer = "container:naturaldateandtime.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C75990C1B48BAC2009C7CCB"
+            BlueprintIdentifier = "0C9397211B50D549006993A9"
             BuildableName = "naturaldateandtime.app"
             BlueprintName = "naturaldateandtime"
             ReferencedContainer = "container:naturaldateandtime.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C75990C1B48BAC2009C7CCB"
+            BlueprintIdentifier = "0C9397211B50D549006993A9"
             BuildableName = "naturaldateandtime.app"
             BlueprintName = "naturaldateandtime"
             ReferencedContainer = "container:naturaldateandtime.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C75990C1B48BAC2009C7CCB"
+            BlueprintIdentifier = "0C9397211B50D549006993A9"
             BuildableName = "naturaldateandtime.app"
             BlueprintName = "naturaldateandtime"
             ReferencedContainer = "container:naturaldateandtime.xcodeproj">
