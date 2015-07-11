@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C9397281B50D549006993A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9397271B50D549006993A9 /* AppDelegate.swift */; };
-		0C93972A1B50D549006993A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9397291B50D549006993A9 /* ViewController.swift */; };
+		0C93972A1B50D549006993A9 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9397291B50D549006993A9 /* QuestionViewController.swift */; };
 		0C93972D1B50D549006993A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C93972B1B50D549006993A9 /* Main.storyboard */; };
 		0C93972F1B50D549006993A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C93972E1B50D549006993A9 /* Images.xcassets */; };
 		0C9397321B50D549006993A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9397301B50D549006993A9 /* LaunchScreen.xib */; };
@@ -29,7 +29,7 @@
 		0C9397221B50D549006993A9 /* naturaldateandtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naturaldateandtime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9397261B50D549006993A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9397271B50D549006993A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C9397291B50D549006993A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C9397291B50D549006993A9 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		0C93972C1B50D549006993A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C93972E1B50D549006993A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0C9397311B50D549006993A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0C9397271B50D549006993A9 /* AppDelegate.swift */,
-				0C9397291B50D549006993A9 /* ViewController.swift */,
+				0C9397291B50D549006993A9 /* QuestionViewController.swift */,
 				0C93972B1B50D549006993A9 /* Main.storyboard */,
 				0C93972E1B50D549006993A9 /* Images.xcassets */,
 				0C9397301B50D549006993A9 /* LaunchScreen.xib */,
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C93972A1B50D549006993A9 /* ViewController.swift in Sources */,
+				0C93972A1B50D549006993A9 /* QuestionViewController.swift in Sources */,
 				0C9397281B50D549006993A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +409,7 @@
 				0C9397431B50D549006993A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C9397441B50D549006993A9 /* Build configuration list for PBXNativeTarget "naturaldateandtimeTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +418,7 @@
 				0C9397461B50D549006993A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

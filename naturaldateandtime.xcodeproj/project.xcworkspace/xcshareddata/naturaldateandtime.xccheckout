@@ -7,18 +7,18 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>7C863FFE-C7AB-4703-B87D-2B9BFF03B15F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>naturaldateandtime</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>AB7C515430B07C2CA373251869DDFE4A613D3AC5</key>
 		<string>https://github.com/darkosancanin/naturaldatetime_iphone.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>naturaldateandtime/naturaldateandtime.xcodeproj/project.xcworkspace</string>
+	<string>naturaldateandtime.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>AB7C515430B07C2CA373251869DDFE4A613D3AC5</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/darkosancanin/naturaldatetime_iphone.git</string>
