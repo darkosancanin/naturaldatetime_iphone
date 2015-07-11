@@ -23,11 +23,11 @@ class QuestionViewController: UIViewController {
         //self.navigationItem.rightBarButtonItem = infoButtonItem;
         //[infoButton release];
         
-        let infoButton: UIButton = UIButton.buttonWithType(UIButtonType.InfoLight) as! UIButton
-        infoButton.frame = CGRectMake(0, 0, 40, 40)
-        //buttonEdit.addTarget(self, action: "rightNavItemEditClick:", forControlEvents: UIControlEvents.TouchUpInside)
-        var rightBarButtonInfoButton: UIBarButtonItem = UIBarButtonItem(customView: infoButton)
-        self.navigationItem.setRightBarButtonItem(rightBarButtonInfoButton, animated: false)
+        //let infoButton: UIButton = UIButton.buttonWithType(UIButtonType.InfoLight) as! UIButton
+        //infoButton.frame = CGRectMake(0, 0, 40, 40)
+        //infoButton.addTarget(self, action: "rightNavItemEditClick", forControlEvents: UIControlEvents.TouchUpInside)
+        //var rightBarButtonInfoButton: UIBarButtonItem = UIBarButtonItem(customView: infoButton)
+        //self.navigationItem.setRightBarButtonItem(rightBarButtonInfoButton, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +37,7 @@ class QuestionViewController: UIViewController {
     
     func rightNavItemEditClick(sender:UIButton!)
     {
+        self.performSegueWithIdentifier("AboutSegue", sender: nil)
         println("rightNavItemEditClick")
     }
 
