@@ -17,6 +17,10 @@ class QuestionViewController: UIViewController, UITextViewDelegate {
         self.view.addConstraint(heightConstraint)
         
         self.automaticallyAdjustsScrollViewInsets = false
+        
+        var titleImage = UIImage(named: "Title")
+        var titleImageView = UIImageView(image: titleImage)
+        self.navigationItem.titleView = titleImageView
     }
 
     override func didReceiveMemoryWarning() {

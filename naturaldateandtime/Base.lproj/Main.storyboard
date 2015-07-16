@@ -170,7 +170,7 @@
             </objects>
             <point key="canvasLocation" x="3612" y="661"/>
         </scene>
-        <!--Natural Date and Time-->
+        <!--Question View Controller-->
         <scene sceneID="aaW-Wd-P3H">
             <objects>
                 <viewController id="ulG-cv-qd0" customClass="QuestionViewController" customModule="naturaldateandtime" customModuleProvider="target" sceneMemberID="viewController">
@@ -285,7 +285,7 @@
                             <constraint firstAttribute="trailing" secondItem="VhQ-IQ-ojF" secondAttribute="trailing" id="xNs-RO-uMY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Natural Date and Time" id="fc9-hN-FhC">
+                    <navigationItem key="navigationItem" id="fc9-hN-FhC">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="gJ6-yi-nS2">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="pUP-NL-h1h">
                                 <rect key="frame" x="451" y="7" width="22" height="22"/>
