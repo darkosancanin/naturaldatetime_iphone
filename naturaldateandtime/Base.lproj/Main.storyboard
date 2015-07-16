@@ -4,120 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Old Question View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController id="vXZ-lx-hvc" userLabel="Old Question View Controller" customClass="QuestionViewController" customModule="naturaldateandtime" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textView opaque="NO" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Outer Question Text View" translatesAutoresizingMaskIntoConstraints="NO" id="PKe-zc-bSa" userLabel="Outer Question Text View">
-                                <rect key="frame" x="20" y="74" width="560" height="39"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" text="What time is it in Chicago when it is 9am in Paris?" translatesAutoresizingMaskIntoConstraints="NO" id="zBb-ji-Z6w" userLabel="Question Text View">
-                                <rect key="frame" x="20" y="74" width="510" height="39"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xak-w4-nwa">
-                                <rect key="frame" x="453" y="123" width="127" height="27"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
-                                <state key="normal" title="example questions &gt;&gt;">
-                                    <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="0.31711296979999998" green="0.49247880550000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Yur-1O-inq" kind="show" identifier="ExampleSegue" id="Xx9-fW-vgj"/>
-                                </connections>
-                            </button>
-                            <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" text="The current time in Chicago, Illinois is 10am on the 1st of June 2012." translatesAutoresizingMaskIntoConstraints="NO" id="ACM-LP-Su6" userLabel="Answer Text View">
-                                <rect key="frame" x="20" y="160" width="560" height="62"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
-                            </textView>
-                            <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9U2-lI-1WE" userLabel="Outer Notes Text View">
-                                <rect key="frame" x="20" y="232" width="560" height="39"/>
-                                <color key="backgroundColor" red="0.98431372549999996" green="0.92549019610000005" blue="0.53333333329999999" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
-                            </textView>
-                            <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" text="In Sydney, New South Wales, Australia the time 2:30am..." translatesAutoresizingMaskIntoConstraints="NO" id="K31-xY-FG5" userLabel="Notes Text View">
-                                <rect key="frame" x="80" y="232" width="500" height="32"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
-                            </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="powered by www.naturaldateandtime.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XGB-ta-had">
-                                <rect key="frame" x="187" y="576" width="226" height="14"/>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="12"/>
-                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="9U2-lI-1WE" firstAttribute="top" secondItem="ACM-LP-Su6" secondAttribute="bottom" constant="10" id="1k2-wp-vbf"/>
-                            <constraint firstItem="PKe-zc-bSa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="BWY-Az-sRb"/>
-                            <constraint firstAttribute="trailing" secondItem="9U2-lI-1WE" secondAttribute="trailing" constant="20" id="E0i-vA-nna"/>
-                            <constraint firstItem="ACM-LP-Su6" firstAttribute="top" secondItem="Xak-w4-nwa" secondAttribute="bottom" constant="10" id="G4e-n9-bJC"/>
-                            <constraint firstItem="PKe-zc-bSa" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="Iwm-Iq-6NX"/>
-                            <constraint firstItem="9U2-lI-1WE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="Jqm-SG-gE6"/>
-                            <constraint firstAttribute="trailing" secondItem="K31-xY-FG5" secondAttribute="trailing" constant="20" id="LNk-Ov-GlO"/>
-                            <constraint firstAttribute="centerX" secondItem="XGB-ta-had" secondAttribute="centerX" id="QU0-LR-4Yl"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XGB-ta-had" secondAttribute="bottom" constant="10" id="RKS-BB-cMI"/>
-                            <constraint firstItem="XGB-ta-had" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9U2-lI-1WE" secondAttribute="bottom" constant="10" id="RRJ-ie-Xr8"/>
-                            <constraint firstAttribute="trailing" secondItem="ACM-LP-Su6" secondAttribute="trailing" constant="20" id="TKs-o4-Pg4"/>
-                            <constraint firstItem="ACM-LP-Su6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="Wa9-E1-kvZ"/>
-                            <constraint firstItem="zBb-ji-Z6w" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="eTb-np-lpz"/>
-                            <constraint firstItem="K31-xY-FG5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="80" id="feQ-d4-id6"/>
-                            <constraint firstAttribute="trailing" secondItem="zBb-ji-Z6w" secondAttribute="trailing" constant="70" id="juq-nf-aCO"/>
-                            <constraint firstItem="Xak-w4-nwa" firstAttribute="top" secondItem="zBb-ji-Z6w" secondAttribute="bottom" constant="10" id="kl8-mb-wPt"/>
-                            <constraint firstItem="zBb-ji-Z6w" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="qos-Fo-1Nw"/>
-                            <constraint firstAttribute="trailing" secondItem="Xak-w4-nwa" secondAttribute="trailing" constant="20" id="vid-wB-ntr"/>
-                            <constraint firstItem="K31-xY-FG5" firstAttribute="top" secondItem="ACM-LP-Su6" secondAttribute="bottom" constant="10" id="wLQ-eM-jRK"/>
-                            <constraint firstAttribute="trailing" secondItem="PKe-zc-bSa" secondAttribute="trailing" constant="20" id="xHw-6G-oRa"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="baa-dh-Eru">
-                        <barButtonItem key="rightBarButtonItem" id="Yly-wY-gwr">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="MAc-f8-m0T">
-                                <rect key="frame" x="451" y="7" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="iDi-eZ-XTT" kind="show" id="ij7-DQ-yo0"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="answerTextView" destination="ACM-LP-Su6" id="zwa-xm-3Wm"/>
-                        <outlet property="outerQuestionTextView" destination="PKe-zc-bSa" id="Pmf-ZX-Jjm"/>
-                        <outlet property="questionTextView" destination="zBb-ji-Z6w" id="beG-mZ-Srt"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2622" y="287"/>
-        </scene>
         <!--About View Controller-->
         <scene sceneID="j0i-C9-a3p">
             <objects>
@@ -142,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTT-jO-DyS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3612" y="-22"/>
+            <point key="canvasLocation" x="2770" y="4"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Kgm-O0-UxA">
@@ -168,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xwg-cg-JxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3612" y="661"/>
+            <point key="canvasLocation" x="2770" y="665"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="aaW-Wd-P3H">
@@ -210,6 +96,9 @@
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="Yur-1O-inq" kind="show" id="zA4-qz-kuR"/>
+                                                </connections>
                                             </button>
                                             <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="The current time in Chicago, Illinois is 10am on the 1st of June 2012." translatesAutoresizingMaskIntoConstraints="NO" id="zwC-mv-SF8" userLabel="Answer Text View">
                                                 <rect key="frame" x="10" y="97" width="580" height="62"/>
@@ -239,7 +128,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.89563607119999999" green="0.93831884990000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="h9g-ke-xei" firstAttribute="leading" secondItem="sfH-Am-qN3" secondAttribute="leading" constant="10" id="3OQ-OE-xJQ"/>
                                             <constraint firstItem="h9g-ke-xei" firstAttribute="top" secondItem="sfH-Am-qN3" secondAttribute="top" constant="10" id="6uL-M9-0Tq"/>
@@ -268,7 +157,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.98613109170000002" blue="0.64984704869999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="sfH-Am-qN3" secondAttribute="trailing" id="BK6-Gh-fQv"/>
                                     <constraint firstItem="sfH-Am-qN3" firstAttribute="leading" secondItem="VhQ-IQ-ojF" secondAttribute="leading" id="EQG-mB-4MJ"/>
@@ -277,7 +166,8 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="VhQ-IQ-ojF" secondAttribute="bottom" id="RWJ-bm-YyX"/>
                             <constraint firstItem="VhQ-IQ-ojF" firstAttribute="top" secondItem="SFm-28-sVz" secondAttribute="bottom" constant="1" id="U7a-pb-8Vn" userLabel="Vertical Space - Scroll View - Top Layout Guide"/>
@@ -286,18 +176,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fc9-hN-FhC">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="gJ6-yi-nS2">
+                        <barButtonItem key="rightBarButtonItem" id="gJ6-yi-nS2">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="pUP-NL-h1h">
                                 <rect key="frame" x="451" y="7" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iDi-eZ-XTT" kind="show" id="xvr-3P-548"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="contentView" destination="sfH-Am-qN3" id="JJy-hs-xzU"/>
+                        <outlet property="notesTextView" destination="zwC-mv-SF8" id="ffG-Nj-a1L"/>
                         <outlet property="outerNotesView" destination="VhQ-IQ-ojF" id="WOr-Oq-zmG"/>
                         <outlet property="scrollView" destination="VhQ-IQ-ojF" id="8Qn-va-EKa"/>
                     </connections>

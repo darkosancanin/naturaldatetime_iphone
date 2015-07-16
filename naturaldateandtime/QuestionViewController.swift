@@ -5,6 +5,7 @@ class QuestionViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var outerNotesView: UIScrollView!
+    @IBOutlet weak var notesTextView: UITextView!
     
     override func viewDidLoad() {
         var leftConstraint: NSLayoutConstraint = NSLayoutConstraint(item: self.contentView, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.Left, multiplier: 1.0, constant: 0)
