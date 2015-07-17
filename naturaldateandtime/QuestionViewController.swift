@@ -39,8 +39,16 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
         self.questionTextView.becomeFirstResponder()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "ExamplesSegue" {
+            let examplesViewController = segue.destinationViewController as! ExamplesViewController
+            examplesViewController.delegate = self
+        }
+    }
+    
     func didSelectQuestion(question: String){
-        //self.navigationController.popViewControllerAnimated(true)
+        self.navigationController!.popViewControllerAnimated(true)
         self.removeSampleQuestion()
         self.questionTextView.text = question
         self.questionTextView.textColor = UIColor.blackColor()
