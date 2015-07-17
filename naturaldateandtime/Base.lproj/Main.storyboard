@@ -81,7 +81,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="What time is it in Chicago when it is 9am in Paris?" translatesAutoresizingMaskIntoConstraints="NO" id="s0O-O1-Dg0" userLabel="Question Text View">
-                                                <rect key="frame" x="10" y="10" width="515" height="40"/>
+                                                <rect key="frame" x="10" y="10" width="530" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="21"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -130,17 +130,27 @@
                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o76-pS-1oy" userLabel="Clear Question Button">
+                                                <rect key="frame" x="550" y="15" width="30" height="30"/>
+                                                <state key="normal" image="ClearQuestion">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearQuestionButtonPressed:" destination="ulG-cv-qd0" eventType="touchUpInside" id="IaL-g9-ZQe"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="h9g-ke-xei" firstAttribute="leading" secondItem="sfH-Am-qN3" secondAttribute="leading" constant="10" id="3OQ-OE-xJQ"/>
                                             <constraint firstItem="h9g-ke-xei" firstAttribute="top" secondItem="sfH-Am-qN3" secondAttribute="top" constant="10" id="6uL-M9-0Tq"/>
                                             <constraint firstItem="miS-Sm-bhW" firstAttribute="bottom" secondItem="dc0-8Y-9bi" secondAttribute="bottom" constant="7" id="85f-R9-nuf"/>
+                                            <constraint firstItem="o76-pS-1oy" firstAttribute="trailing" secondItem="h9g-ke-xei" secondAttribute="trailing" constant="-10" id="8l6-EB-NwW"/>
                                             <constraint firstItem="s0O-O1-Dg0" firstAttribute="bottom" secondItem="h9g-ke-xei" secondAttribute="bottom" constant="1" id="A5s-oH-3ui"/>
                                             <constraint firstItem="dc0-8Y-9bi" firstAttribute="leading" secondItem="sfH-Am-qN3" secondAttribute="leading" constant="65" id="C4A-HU-aI2"/>
                                             <constraint firstAttribute="trailing" secondItem="dc0-8Y-9bi" secondAttribute="trailing" constant="10" id="EiD-ux-PZk"/>
                                             <constraint firstAttribute="trailing" secondItem="h9g-ke-xei" secondAttribute="trailing" constant="10" id="I68-Bs-kUB"/>
-                                            <constraint firstAttribute="trailing" secondItem="s0O-O1-Dg0" secondAttribute="trailing" constant="75" id="IHm-ZL-mbv"/>
+                                            <constraint firstAttribute="trailing" secondItem="s0O-O1-Dg0" secondAttribute="trailing" constant="60" id="IHm-ZL-mbv"/>
                                             <constraint firstItem="HBk-Mc-5Y5" firstAttribute="top" secondItem="OeX-Nq-9JQ" secondAttribute="bottom" constant="10" id="K9G-ZK-YjU"/>
                                             <constraint firstAttribute="trailing" secondItem="zwC-mv-SF8" secondAttribute="trailing" constant="10" id="LFy-Oa-xh1"/>
                                             <constraint firstItem="s0O-O1-Dg0" firstAttribute="leading" secondItem="sfH-Am-qN3" secondAttribute="leading" constant="10" id="Leb-2P-4dR"/>
@@ -153,6 +163,7 @@
                                             <constraint firstAttribute="bottom" secondItem="WK6-13-s5q" secondAttribute="bottom" constant="15" id="j2L-VK-HW9"/>
                                             <constraint firstAttribute="width" constant="600" placeholder="YES" id="pG4-Uc-778"/>
                                             <constraint firstItem="miS-Sm-bhW" firstAttribute="top" secondItem="zwC-mv-SF8" secondAttribute="bottom" constant="10" id="pVp-8S-BQ8"/>
+                                            <constraint firstItem="o76-pS-1oy" firstAttribute="centerY" secondItem="h9g-ke-xei" secondAttribute="centerY" id="pen-hC-3Oe"/>
                                             <constraint firstItem="zwC-mv-SF8" firstAttribute="top" secondItem="HBk-Mc-5Y5" secondAttribute="bottom" constant="10" id="rNi-fo-TTu"/>
                                             <constraint firstItem="miS-Sm-bhW" firstAttribute="leading" secondItem="sfH-Am-qN3" secondAttribute="leading" constant="10" id="uAa-VC-qdP"/>
                                             <constraint firstItem="zwC-mv-SF8" firstAttribute="leading" secondItem="sfH-Am-qN3" secondAttribute="leading" constant="10" id="vH4-8M-Dap"/>
@@ -228,6 +239,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ClearQuestion" width="30" height="30"/>
         <image name="Loading1" width="120" height="24"/>
     </resources>
 </document>

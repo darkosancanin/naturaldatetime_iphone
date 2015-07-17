@@ -21,7 +21,13 @@ class QuestionViewController: UIViewController, UITextViewDelegate {
         self.setupLoadingView()
         self.setUpNoteView()
         self.setUpQuestionTextView()
-        //self.hideAll()
+        self.hideAll()
+        self.showRandomQuestion()
+    }
+    
+    @IBAction func clearQuestionButtonPressed(sender: AnyObject) {
+        self.questionTextView.text = ""
+        self.hideAll()
         self.showRandomQuestion()
     }
     
