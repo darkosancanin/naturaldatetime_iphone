@@ -22,6 +22,12 @@ class ExamplesViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        var sectionTitle = ExampleQuestions.sharedInstance.getExampleQuestionsSections()[section].sectionTitle as NSString
+        var size = sectionTitle.sizeWithAttributes([NSFontAttributeName: UIFont(name: "Georgia", size: 20)!])
+        return size.height + 5
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("QuestionCell", forIndexPath: indexPath) as! UITableViewCell
 		cell.textLabel?.text = ExampleQuestions.sharedInstance.getExampleQuestionsSections()[indexPath.section].questions[indexPath.row]
