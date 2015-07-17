@@ -1,6 +1,6 @@
 import UIKit
 
-class QuestionViewController: UIViewController, UITextViewDelegate {
+class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesViewControllerDelegate {
     
     var isShowingSampleQuestion = true
 	var contentViewHeightConstraint: NSLayoutConstraint!
@@ -37,6 +37,14 @@ class QuestionViewController: UIViewController, UITextViewDelegate {
         self.isShowingSampleQuestion = true
         self.questionTextView.selectedRange = NSMakeRange(0, 0);
         self.questionTextView.becomeFirstResponder()
+    }
+    
+    func didSelectQuestion(question: String){
+        //self.navigationController.popViewControllerAnimated(true)
+        self.removeSampleQuestion()
+        self.questionTextView.text = question
+        self.questionTextView.textColor = UIColor.blackColor()
+        //self.askQuestion()
     }
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
