@@ -2,11 +2,12 @@ import UIKit
 
 class QuestionViewController: UIViewController, UITextViewDelegate {
     
-	var heightConstraint: NSLayoutConstraint!
+	var contentViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var outerQuestionTextView: UITextView!
     @IBOutlet weak var questionTextView: UITextView!
+    @IBOutlet weak var loadingImageView: UIImageView!
     @IBOutlet weak var answerTextView: UITextView!
     @IBOutlet weak var outerNotesView: UIScrollView!
     @IBOutlet weak var notesTextView: UITextView!
@@ -16,6 +17,42 @@ class QuestionViewController: UIViewController, UITextViewDelegate {
 		self.addContentViewWidthConstraints()
         self.updateContentViewHeightConstraint()
 		self.setUpTitle()
+        self.setupLoadingView()
+        self.setUpNoteView()
+        self.setUpQuestionTextView()
+        //self.hideAll()
+    }
+    
+    func setupLoadingView() {
+        var animationImages:[UIImage] = []
+        for position in 1...10
+        {
+            var imageName : String = "Loading\(position)"
+            animationImages.append(UIImage(named:imageName)!)
+        }
+        self.loadingImageView.animationImages = animationImages
+        self.loadingImageView.animationDuration = 1.0
+        self.loadingImageView.animationRepeatCount = 0
+    }
+    
+    func setUpQuestionTextView() {
+        self.questionTextView.delegate = self
+        self.questionTextView.layer.cornerRadius = 5;
+        self.outerQuestionTextView.layer.cornerRadius = 5;
+    }
+    
+    func setUpNoteView() {
+        self.outerNotesView.layer.borderColor = UIColor(red: 250/255, green: 212/255, blue: 46/255, alpha: 1).CGColor
+        self.outerNotesView.layer.borderWidth = 2.0
+    }
+    
+    func hideAll() {
+        self.answerTextView.hidden = true
+        self.loadingImageView.hidden = true
+        self.loadingImageView.stopAnimating()
+        self.notesTextView.hidden = true
+        self.outerNotesView.hidden = true
+        //self.noteImage.hidden = true
     }
     
     func setUpTitle(){
@@ -39,13 +76,13 @@ class QuestionViewController: UIViewController, UITextViewDelegate {
             height = maxHeight;
         }
         
-        if let constraint = heightConstraint {
+        if let constraint = contentViewHeightConstraint {
             self.view.removeConstraint(constraint)
-            self.heightConstraint.constant = height;
-            self.view.addConstraint(heightConstraint!)
+            self.contentViewHeightConstraint.constant = height;
+            self.view.addConstraint(contentViewHeightConstraint!)
         }
         else {
-            heightConstraint = NSLayoutConstraint(item: self.contentView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.GreaterThanOrEqual, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: height)
+            contentViewHeightConstraint = NSLayoutConstraint(item: self.contentView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.GreaterThanOrEqual, toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute, multiplier: 1.0, constant: height)
         }
 	}
 	
