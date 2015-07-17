@@ -39,6 +39,37 @@ class QuestionViewController: UIViewController, UITextViewDelegate {
         self.questionTextView.becomeFirstResponder()
     }
     
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        self.hideAll()
+        self.questionTextView.textColor = UIColor.blackColor()
+        if text == "\n" {
+            if self.isShowingSampleQuestion == false {
+                //self.askQuestion()
+            }
+        }
+        self.removeSampleQuestion()
+        return true
+    }
+    
+    func removeSampleQuestion() {
+        if self.isShowingSampleQuestion {
+            self.isShowingSampleQuestion = false
+            self.questionTextView.text = ""
+        }
+    }
+    
+    func textViewDidChange(textView: UITextView) {
+        if count(self.questionTextView.text) == 0 {
+            self.showRandomQuestion()
+        }
+    }
+    
+    func textViewDidChangeSelection(textView: UITextView) {
+        if textView.selectedRange.location > 0 && self.isShowingSampleQuestion == true {
+            textView.selectedRange = NSMakeRange(0, 0)
+        }
+    }
+    
     func setupLoadingView() {
         var animationImages:[UIImage] = []
         for position in 1...10
