@@ -16,8 +16,10 @@ class ExamplesViewController: UITableViewController {
         return ExampleQuestions.sharedInstance.getExampleQuestionsSections()[section].questions.count
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return ExampleQuestions.sharedInstance.getExampleQuestionsSections()[section].sectionTitle
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCellWithIdentifier("SectionHeaderCell") as! UITableViewCell
+        cell.textLabel?.text = ExampleQuestions.sharedInstance.getExampleQuestionsSections()[section].sectionTitle
+        return cell
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

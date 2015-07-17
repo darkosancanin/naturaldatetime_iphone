@@ -30,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="2770" y="4"/>
         </scene>
-        <!--Examples View Controller-->
+        <!--Examples-->
         <scene sceneID="ucH-OK-wCF">
             <objects>
                 <tableViewController id="nfc-mm-Vvn" customClass="ExamplesViewController" customModule="naturaldateandtime" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,12 +39,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="QuestionCell" editingAccessoryType="disclosureIndicator" textLabel="rJu-dK-Gss" style="IBUITableViewCellStyleDefault" id="Tbo-Yf-GGy">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SectionHeaderCell" textLabel="rJu-dK-Gss" style="IBUITableViewCellStyleDefault" id="Tbo-Yf-GGy">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tbo-Yf-GGy" id="Q0E-5p-K6i">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rJu-dK-Gss">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="QuestionCell" editingAccessoryType="disclosureIndicator" textLabel="eHx-IT-Zky" style="IBUITableViewCellStyleDefault" id="bdN-np-v1r">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bdN-np-v1r" id="60z-dx-FEO">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eHx-IT-Zky">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,6 +76,7 @@
                             <outlet property="delegate" destination="nfc-mm-Vvn" id="w1m-Fi-vXZ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Examples" id="bQN-Ll-Eyi"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBJ-eI-pqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
