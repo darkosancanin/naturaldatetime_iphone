@@ -190,9 +190,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="answerTextView" destination="zwC-mv-SF8" id="fR1-iE-uZ4"/>
                         <outlet property="contentView" destination="sfH-Am-qN3" id="JJy-hs-xzU"/>
                         <outlet property="notesTextView" destination="zwC-mv-SF8" id="ffG-Nj-a1L"/>
                         <outlet property="outerNotesView" destination="VhQ-IQ-ojF" id="WOr-Oq-zmG"/>
+                        <outlet property="outerQuestionTextView" destination="h9g-ke-xei" id="RTr-8V-Lbc"/>
+                        <outlet property="questionTextView" destination="s0O-O1-Dg0" id="E5p-7O-faj"/>
                         <outlet property="scrollView" destination="VhQ-IQ-ojF" id="8Qn-va-EKa"/>
                     </connections>
                 </viewController>
