@@ -1,3 +1,5 @@
+import Foundation
+
 class ExampleQuestionsSection {
     var sectionTitle: String
 	var questions: [String]
@@ -26,6 +28,10 @@ class ExampleQuestions {
     }
 	
 	func getRandomQuestion() -> String {
-		return exampleQuestionsSections[0].questions[0]
+        var randomSectionIndex = Int(arc4random_uniform(UInt32(exampleQuestionsSections.count)))
+        var randomQuestionIndex = Int(arc4random_uniform(UInt32(exampleQuestionsSections[randomSectionIndex].questions.count)))
+        println(randomSectionIndex)
+        println(randomQuestionIndex)
+		return exampleQuestionsSections[randomSectionIndex].questions[randomQuestionIndex]
 	}
 }

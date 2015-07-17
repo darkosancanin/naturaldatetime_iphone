@@ -2,6 +2,7 @@ import UIKit
 
 class QuestionViewController: UIViewController, UITextViewDelegate {
     
+    var isShowingSampleQuestion = true
 	var contentViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
@@ -21,6 +22,15 @@ class QuestionViewController: UIViewController, UITextViewDelegate {
         self.setUpNoteView()
         self.setUpQuestionTextView()
         //self.hideAll()
+        self.showRandomQuestion()
+    }
+    
+    func showRandomQuestion() {
+        self.questionTextView.text = "e.g. " + ExampleQuestions.sharedInstance.getRandomQuestion()
+        self.questionTextView.textColor = UIColor.lightGrayColor()
+        self.isShowingSampleQuestion = true
+        self.questionTextView.selectedRange = NSMakeRange(0, 0);
+        self.questionTextView.becomeFirstResponder()
     }
     
     func setupLoadingView() {
