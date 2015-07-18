@@ -6,6 +6,7 @@ class ExamplesViewController: UITableViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.contentInset = UIEdgeInsetsMake(15, 0, 0, 0)
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -32,6 +33,12 @@ class ExamplesViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("QuestionCell", forIndexPath: indexPath) as! UITableViewCell
 		cell.textLabel?.text = ExampleQuestions.sharedInstance.getExampleQuestionsSections()[indexPath.section].questions[indexPath.row]
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        var question = ExampleQuestions.sharedInstance.getExampleQuestionsSections()[indexPath.section].questions[indexPath.row] as NSString
+        var size = NSString(string: question).boundingRectWithSize(CGSize(width: self.tableView.frame.width, height: CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont(name: "Georgia", size: 18)!], context: nil)
+        return size.height + 10
     }
 	
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
