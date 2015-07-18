@@ -37,7 +37,7 @@ class ExamplesViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         var question = ExampleQuestions.sharedInstance.getExampleQuestionsSections()[indexPath.section].questions[indexPath.row] as NSString
-        var size = NSString(string: question).boundingRectWithSize(CGSize(width: self.tableView.frame.width, height: CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont(name: "Georgia", size: 18)!], context: nil)
+        var size = NSString(string: question).boundingRectWithSize(CGSize(width: self.tableView.frame.width - 19, height: CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont(name: "Georgia", size: 18)!], context: nil)
         return size.height + 10
     }
 	
