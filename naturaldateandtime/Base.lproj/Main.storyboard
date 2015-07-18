@@ -98,7 +98,7 @@
                                 <rect key="frame" x="0.0" y="65" width="600" height="535"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfH-Am-qN3" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="274"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="outerQuestionView" translatesAutoresizingMaskIntoConstraints="NO" id="h9g-ke-xei" userLabel="Outer Question Text View">
                                                 <rect key="frame" x="10" y="10" width="580" height="39"/>
@@ -130,14 +130,14 @@
                                                 <rect key="frame" x="240" y="97" width="120" height="24"/>
                                             </imageView>
                                             <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="The current time in Chicago, Illinois is 10am on the 1st of June 2012." translatesAutoresizingMaskIntoConstraints="NO" id="zwC-mv-SF8" userLabel="Answer Text View">
-                                                <rect key="frame" x="10" y="131" width="580" height="62"/>
+                                                <rect key="frame" x="10" y="97" width="580" height="62"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
                                             </textView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="powered by www.naturaldateandtime.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="WK6-13-s5q" userLabel="Footer">
-                                                <rect key="frame" x="187" y="245" width="226" height="14"/>
+                                                <rect key="frame" x="187" y="211" width="226" height="14"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="12"/>
                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -152,7 +152,7 @@
                                                 </connections>
                                             </button>
                                             <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="In Sydney, New South Wales, Australia the time 2:30am..." translatesAutoresizingMaskIntoConstraints="NO" id="miS-Sm-bhW" userLabel="Notes Text View">
-                                                <rect key="frame" x="10" y="203" width="580" height="32"/>
+                                                <rect key="frame" x="10" y="169" width="580" height="32"/>
                                                 <color key="backgroundColor" red="0.98431372549999996" green="0.92549019610000005" blue="0.53333333329999999" alpha="1" colorSpace="deviceRGB"/>
                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
@@ -171,6 +171,7 @@
                                             <constraint firstAttribute="trailing" secondItem="zwC-mv-SF8" secondAttribute="trailing" constant="10" id="LFy-Oa-xh1"/>
                                             <constraint firstItem="s0O-O1-Dg0" firstAttribute="leading" secondItem="sfH-Am-qN3" secondAttribute="leading" constant="10" id="Leb-2P-4dR"/>
                                             <constraint firstItem="OeX-Nq-9JQ" firstAttribute="top" secondItem="s0O-O1-Dg0" secondAttribute="bottom" constant="10" id="PJM-vo-wdb"/>
+                                            <constraint firstItem="zwC-mv-SF8" firstAttribute="top" secondItem="OeX-Nq-9JQ" secondAttribute="bottom" constant="10" id="RUO-gb-JsC"/>
                                             <constraint firstAttribute="trailing" secondItem="OeX-Nq-9JQ" secondAttribute="trailing" constant="10" id="SWT-e5-yhU"/>
                                             <constraint firstAttribute="centerX" secondItem="WK6-13-s5q" secondAttribute="centerX" id="TZV-ce-yZY"/>
                                             <constraint firstAttribute="trailing" secondItem="miS-Sm-bhW" secondAttribute="trailing" constant="10" id="Tqi-sJ-OLU"/>
@@ -181,7 +182,6 @@
                                             <constraint firstAttribute="width" constant="600" placeholder="YES" id="pG4-Uc-778"/>
                                             <constraint firstItem="miS-Sm-bhW" firstAttribute="top" secondItem="zwC-mv-SF8" secondAttribute="bottom" constant="10" id="pVp-8S-BQ8"/>
                                             <constraint firstItem="o76-pS-1oy" firstAttribute="centerY" secondItem="h9g-ke-xei" secondAttribute="centerY" id="pen-hC-3Oe"/>
-                                            <constraint firstItem="zwC-mv-SF8" firstAttribute="top" secondItem="HBk-Mc-5Y5" secondAttribute="bottom" constant="10" id="rNi-fo-TTu"/>
                                             <constraint firstItem="miS-Sm-bhW" firstAttribute="leading" secondItem="sfH-Am-qN3" secondAttribute="leading" constant="10" id="uAa-VC-qdP"/>
                                             <constraint firstItem="zwC-mv-SF8" firstAttribute="leading" secondItem="sfH-Am-qN3" secondAttribute="leading" constant="10" id="vH4-8M-Dap"/>
                                         </constraints>

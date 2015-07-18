@@ -51,7 +51,7 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
         self.removeSampleQuestion()
         self.questionTextView.text = question
         self.questionTextView.textColor = UIColor.blackColor()
-        //self.askQuestion()
+        self.askQuestion()
     }
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
@@ -59,7 +59,7 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
         self.questionTextView.textColor = UIColor.blackColor()
         if text == "\n" {
             if self.isShowingSampleQuestion == false {
-                //self.askQuestion()
+                self.askQuestion()
             }
         }
         self.removeSampleQuestion()
@@ -154,6 +154,78 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func askQuestion() {
+        self.hideAll()
+        self.questionTextView.resignFirstResponder()
+        self.loadingImageView.hidden = false
+        self.loadingImageView.startAnimating()
+        var urlRequest = NSMutableURLRequest(URL: NSURL(string: "http://www.naturaldateandtime.com/api/question")!)
+        var urlSession = NSURLSession.sharedSession()
+        urlRequest.HTTPMethod = "POST"
+        urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        var postParameters = "client=iphone&client_version=2.0&question=" + self.questionTextView.text.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+        urlRequest.HTTPBody = postParameters.dataUsingEncoding(NSUTF8StringEncoding)
+        
+        var dataTask = urlSession.dataTaskWithRequest(urlRequest, completionHandler: {data, response, error -> Void in
+            dispatch_async(dispatch_get_main_queue(),{
+                self.hideAll()
+            })
+            if error != nil {
+                self.showError(error)
+                return
+            }
+            var jsonError: NSError?
+            var jsonObject = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &jsonError) as? NSDictionary
+            
+            if(jsonError != nil) {
+                self.showError(jsonError)
+                return
+            }
+            
+            if let parsedJSON = jsonObject {
+                let answerText = parsedJSON["AnswerText"] as? String
+                let note = parsedJSON["Note"] as? String
+                let understoodQuestion = parsedJSON["UnderstoodQuestion"] as! Bool
+                if understoodQuestion {
+                    self.showAnswer(answerText, note:note)
+                } else {
+                    self.showAnswer("Im sorry I could not understand your question. Please try and rephrase your question or tap on the examples link above to see what questions I do understand.", note: nil)
+                }
+            }
+            else {
+                self.showAnswer("Oops. Something went wrong. Please try again.", note:nil)
+            }
+        })
+        
+        dataTask.resume()
+    }
+    
+    func showAnswer(answer: String?, note: String?){
+        dispatch_async(dispatch_get_main_queue(),{
+            if let answerText = answer {
+                self.answerTextView.text = answerText
+                self.answerTextView.hidden = false
+            }
+        
+            if let noteText = note {
+                self.notesTextView.text = noteText
+                self.notesTextView.hidden = false
+            }
+        })
+    }
+    
+    func showError(error: NSError?){
+        dispatch_async(dispatch_get_main_queue(),{
+            println(error!.localizedDescription)
+            var friendlyError = "Oops. Something went wrong. Please try again."
+            if error!.localizedDescription.lowercaseString.rangeOfString("connection failure occurred") != nil {
+                friendlyError = "Oops. No connection available. Please check your internet connection."
+            }
+            self.showAnswer(friendlyError, note:nil)
+        })
     }
 }
 
