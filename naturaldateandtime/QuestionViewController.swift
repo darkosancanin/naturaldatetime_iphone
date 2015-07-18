@@ -10,7 +10,6 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
     @IBOutlet weak var questionTextView: UITextView!
     @IBOutlet weak var loadingImageView: UIImageView!
     @IBOutlet weak var answerTextView: UITextView!
-    @IBOutlet weak var outerNotesView: UIScrollView!
     @IBOutlet weak var notesTextView: UITextView!
     
     override func viewDidLoad() {
@@ -105,8 +104,9 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
     }
     
     func setUpNoteView() {
-        self.outerNotesView.layer.borderColor = UIColor(red: 250/255, green: 212/255, blue: 46/255, alpha: 1).CGColor
-        self.outerNotesView.layer.borderWidth = 2.0
+        self.notesTextView.layer.borderColor = UIColor(red: 250/255, green: 212/255, blue: 46/255, alpha: 1).CGColor
+        self.notesTextView.layer.borderWidth = 2.0
+        self.notesTextView.contentInset = UIEdgeInsetsMake(3, 3, 3, 3)
     }
     
     func hideAll() {
@@ -114,8 +114,6 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
         self.loadingImageView.hidden = true
         self.loadingImageView.stopAnimating()
         self.notesTextView.hidden = true
-        self.outerNotesView.hidden = true
-        //self.noteImage.hidden = true
     }
     
     func setUpTitle(){
