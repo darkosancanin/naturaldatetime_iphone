@@ -14,7 +14,6 @@
 		0C9397321B50D549006993A9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9397301B50D549006993A9 /* LaunchScreen.xib */; };
 		0C93973E1B50D549006993A9 /* naturaldateandtimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93973D1B50D549006993A9 /* naturaldateandtimeTests.swift */; };
 		0C9397481B50EB77006993A9 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9397471B50EB77006993A9 /* AboutViewController.swift */; };
-		0C93974A1B50FE1C006993A9 /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9397491B50FE1C006993A9 /* AutoTextView.swift */; };
 		0C93974C1B5916B1006993A9 /* ExampleQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93974B1B5916B1006993A9 /* ExampleQuestions.swift */; };
 		0C93974F1B591E37006993A9 /* ExamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93974D1B591E37006993A9 /* ExamplesViewController.swift */; };
 		0C9397501B591E37006993A9 /* ExamplesViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C93974E1B591E37006993A9 /* ExamplesViewControllerDelegate.swift */; };
@@ -42,7 +41,6 @@
 		0C93973C1B50D549006993A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C93973D1B50D549006993A9 /* naturaldateandtimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naturaldateandtimeTests.swift; sourceTree = "<group>"; };
 		0C9397471B50EB77006993A9 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		0C9397491B50FE1C006993A9 /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
 		0C93974B1B5916B1006993A9 /* ExampleQuestions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleQuestions.swift; sourceTree = "<group>"; };
 		0C93974D1B591E37006993A9 /* ExamplesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesViewController.swift; sourceTree = "<group>"; };
 		0C93974E1B591E37006993A9 /* ExamplesViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExamplesViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 				0C93972E1B50D549006993A9 /* Images.xcassets */,
 				0C9397301B50D549006993A9 /* LaunchScreen.xib */,
 				0C9397251B50D549006993A9 /* Supporting Files */,
-				0C9397491B50FE1C006993A9 /* AutoTextView.swift */,
 			);
 			path = naturaldateandtime;
 			sourceTree = "<group>";
@@ -232,7 +229,6 @@
 				0C93972A1B50D549006993A9 /* QuestionViewController.swift in Sources */,
 				0C93974C1B5916B1006993A9 /* ExampleQuestions.swift in Sources */,
 				0C9397501B591E37006993A9 /* ExamplesViewControllerDelegate.swift in Sources */,
-				0C93974A1B50FE1C006993A9 /* AutoTextView.swift in Sources */,
 				0C9397281B50D549006993A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
