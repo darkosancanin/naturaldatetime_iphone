@@ -218,14 +218,11 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
     }
     
     func showError(error: NSError?){
-        dispatch_async(dispatch_get_main_queue(),{
-            println(error!.localizedDescription)
-            var friendlyError = "Oops. Something went wrong. Please try again."
-            if error!.localizedDescription.lowercaseString.rangeOfString("connection failure occurred") != nil {
-                friendlyError = "Oops. No connection available. Please check your internet connection."
-            }
-            self.showAnswer(friendlyError, note:nil)
-        })
+        var friendlyError = "Oops. Something went wrong. Please try again."
+        if error!.localizedDescription.lowercaseString.rangeOfString("connection failure occurred") != nil {
+            friendlyError = "Oops. No connection available. Please check your internet connection."
+        }
+        self.showAnswer(friendlyError, note:nil)
     }
 }
 
