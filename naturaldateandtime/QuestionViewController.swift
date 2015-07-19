@@ -228,8 +228,9 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
     }
     
     func showError(error: NSError){
+        println(error.localizedDescription)
         var friendlyError = "Oops. Something went wrong. Please try again."
-        if error.localizedDescription.lowercaseString.rangeOfString("connection failure occurred") != nil {
+        if error.localizedDescription.lowercaseString.rangeOfString("connection appears to be offline") != nil {
             friendlyError = "Oops. No connection available. Please check your internet connection."
         }
         self.showAnswer(friendlyError, note:nil)
