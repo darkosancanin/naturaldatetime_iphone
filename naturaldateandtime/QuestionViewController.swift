@@ -106,7 +106,7 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
     func setUpNoteView() {
         self.notesTextView.layer.borderColor = UIColor(red: 250/255, green: 212/255, blue: 46/255, alpha: 1).CGColor
         self.notesTextView.layer.borderWidth = 2.0
-        self.notesTextView.contentInset = UIEdgeInsetsMake(3, 3, 3, 3)
+        self.notesTextView.textContainerInset = UIEdgeInsetsMake(8, 8, 8, 8)
     }
     
     func hideAll() {
