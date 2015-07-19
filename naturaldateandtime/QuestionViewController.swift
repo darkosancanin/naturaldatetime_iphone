@@ -26,11 +26,11 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
     }
     
     func setUpDismissKeyboardGesture(){
-        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
     }
     
-    func DismissKeyboard(){
+    func dismissKeyboard(){
         view.endEditing(true)
     }
     
