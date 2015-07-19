@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="dYd-em-8rz" userLabel="Natural Date and Time Image">
-                                <rect key="frame" x="200" y="94" width="200" height="25"/>
+                                <rect key="frame" x="200" y="84" width="200" height="25"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ze-Od-ba0">
-                                <rect key="frame" x="164" y="296" width="272" height="22"/>
+                                <rect key="frame" x="164" y="266" width="272" height="22"/>
                                 <state key="normal" title="  www.naturaldateandtime.com" image="SafariIcon">
                                     <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udJ-Iv-WpY">
-                                <rect key="frame" x="178" y="338" width="244" height="22"/>
+                                <rect key="frame" x="178" y="303" width="244" height="22"/>
                                 <state key="normal" title="  darko@darkosancanin.com" image="EmailIcon">
                                     <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tln-hb-UCW" userLabel="Answer Text View">
-                                <rect key="frame" x="20" y="149" width="560" height="107"/>
+                                <rect key="frame" x="20" y="129" width="560" height="107"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Natural Date and Time is a natural language date and time zone engine powered by naturaldateandtime.com which allows you to view time and date information for any major city in the world by querying in natural english.</string>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -50,14 +50,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="dYd-em-8rz" firstAttribute="top" secondItem="HDu-yE-qGb" secondAttribute="bottom" constant="30" id="4eF-4j-sgd"/>
+                            <constraint firstItem="dYd-em-8rz" firstAttribute="top" secondItem="HDu-yE-qGb" secondAttribute="bottom" constant="20" id="4eF-4j-sgd"/>
                             <constraint firstAttribute="centerX" secondItem="udJ-Iv-WpY" secondAttribute="centerX" id="NY6-vJ-EKC"/>
-                            <constraint firstItem="0Ze-Od-ba0" firstAttribute="top" secondItem="tln-hb-UCW" secondAttribute="bottom" constant="40" id="PHV-HH-Lgg"/>
-                            <constraint firstItem="udJ-Iv-WpY" firstAttribute="top" secondItem="0Ze-Od-ba0" secondAttribute="bottom" constant="20" id="RLo-l3-XCD"/>
+                            <constraint firstItem="0Ze-Od-ba0" firstAttribute="top" secondItem="tln-hb-UCW" secondAttribute="bottom" constant="30" id="PHV-HH-Lgg"/>
+                            <constraint firstItem="udJ-Iv-WpY" firstAttribute="top" secondItem="0Ze-Od-ba0" secondAttribute="bottom" constant="15" id="RLo-l3-XCD"/>
                             <constraint firstAttribute="trailing" secondItem="tln-hb-UCW" secondAttribute="trailing" constant="20" id="RqV-K5-GFf"/>
                             <constraint firstItem="tln-hb-UCW" firstAttribute="leading" secondItem="OHz-GB-qoD" secondAttribute="leading" constant="20" id="S5X-jU-7C4"/>
                             <constraint firstAttribute="centerX" secondItem="0Ze-Od-ba0" secondAttribute="centerX" id="WVD-VB-mwe"/>
-                            <constraint firstItem="tln-hb-UCW" firstAttribute="top" secondItem="dYd-em-8rz" secondAttribute="bottom" constant="30" id="bXc-zD-SMh"/>
+                            <constraint firstItem="tln-hb-UCW" firstAttribute="top" secondItem="dYd-em-8rz" secondAttribute="bottom" constant="20" id="bXc-zD-SMh"/>
                             <constraint firstAttribute="centerX" secondItem="dYd-em-8rz" secondAttribute="centerX" id="k0F-hC-n78"/>
                         </constraints>
                     </view>
