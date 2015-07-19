@@ -146,6 +146,7 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="What time is it in Chicago when it is 9am in Paris?" translatesAutoresizingMaskIntoConstraints="NO" id="s0O-O1-Dg0" userLabel="Question Text View">
                                                 <rect key="frame" x="10" y="10" width="530" height="40"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="21"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
