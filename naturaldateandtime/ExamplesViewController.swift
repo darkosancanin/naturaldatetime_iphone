@@ -25,7 +25,7 @@ class ExamplesViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         var sectionTitle = ExampleQuestions.sharedInstance.getExampleQuestionsSections()[section].sectionTitle as NSString
-        var size = sectionTitle.sizeWithAttributes([NSFontAttributeName: UIFont(name: "Georgia", size: 20)!])
+        var size = NSString(string: sectionTitle).boundingRectWithSize(CGSize(width: self.tableView.frame.width - 19, height: CGFloat.max), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont(name: "Georgia", size: 20)!], context: nil)
         return size.height + 5
     }
     
