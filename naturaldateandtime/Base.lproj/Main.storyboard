@@ -39,7 +39,7 @@
                                     <action selector="didClickOnEmailButton:" destination="iDi-eZ-XTT" eventType="touchUpInside" id="8nB-7q-86U"/>
                                 </connections>
                             </button>
-                            <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tln-hb-UCW" userLabel="Answer Text View">
+                            <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tln-hb-UCW" userLabel="Answer Text View">
                                 <rect key="frame" x="20" y="149" width="560" height="107"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Natural Date and Time is a natural language date and time zone engine powered by naturaldateandtime.com which allows you to view time and date information for any major city in the world by querying in natural english.</string>
@@ -167,7 +167,7 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading1" translatesAutoresizingMaskIntoConstraints="NO" id="HBk-Mc-5Y5" userLabel="Loading View">
                                                 <rect key="frame" x="240" y="97" width="120" height="24"/>
                                             </imageView>
-                                            <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="The current time in Chicago, Illinois is 10am on the 1st of June 2012." translatesAutoresizingMaskIntoConstraints="NO" id="zwC-mv-SF8" userLabel="Answer Text View">
+                                            <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="The current time in Chicago, Illinois is 10am on the 1st of June 2012." translatesAutoresizingMaskIntoConstraints="NO" id="zwC-mv-SF8" userLabel="Answer Text View">
                                                 <rect key="frame" x="10" y="97" width="580" height="62"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -189,7 +189,7 @@
                                                     <action selector="clearQuestionButtonPressed:" destination="ulG-cv-qd0" eventType="touchUpInside" id="IaL-g9-ZQe"/>
                                                 </connections>
                                             </button>
-                                            <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="In Sydney, New South Wales, Australia the time 2:30am..." translatesAutoresizingMaskIntoConstraints="NO" id="miS-Sm-bhW" userLabel="Notes Text View">
+                                            <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="In Sydney, New South Wales, Australia the time 2:30am..." translatesAutoresizingMaskIntoConstraints="NO" id="miS-Sm-bhW" userLabel="Notes Text View">
                                                 <rect key="frame" x="10" y="169" width="580" height="32"/>
                                                 <color key="backgroundColor" red="0.98431372549999996" green="0.92549019610000005" blue="0.53333333329999999" alpha="1" colorSpace="deviceRGB"/>
                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
