@@ -173,15 +173,15 @@ class QuestionViewController: UIViewController, UITextViewDelegate, ExamplesView
             dispatch_async(dispatch_get_main_queue(),{
                 self.hideAll()
             })
-            if error != nil {
-                self.showError(error)
+            if let unwrappedError = error {
+                self.showError(unwrappedError)
                 return
             }
             var jsonError: NSError?
             var jsonObject = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &jsonError) as? NSDictionary
             
-            if(jsonError != nil) {
-                self.showError(jsonError)
+            if let unwrappedError = jsonError {
+                self.showError(unwrappedError)
                 return
             }
             
