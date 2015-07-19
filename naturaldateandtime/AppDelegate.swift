@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  naturaldateandtime
-//
-//  Created by Darko Sancanin on 11/07/2015.
-//  Copyright (c) 2015 darkosancanin.com. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

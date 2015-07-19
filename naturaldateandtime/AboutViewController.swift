@@ -3,13 +3,8 @@ import UIKit
 
 class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
-    @IBOutlet weak var aboutTextView: UITextView!
-    @IBOutlet weak var aboutTextViewHeightConstraint: NSLayoutConstraint!
-    
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-        //self.aboutTextViewHeightConstraint.constant = self.aboutTextView.contentSize.height
-        //self.aboutTextView.sizeToFit()
     }
 	
 	@IBAction func didClickOnWebsiteButton(sender: AnyObject) {
