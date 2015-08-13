@@ -42,7 +42,7 @@
                             <textView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tln-hb-UCW" userLabel="Answer Text View">
                                 <rect key="frame" x="20" y="129" width="560" height="107"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">Natural Date and Time is a natural language date and time zone engine powered by naturaldateandtime.com which allows you to view time and date information for any major city in the world by querying in natural english.</string>
+                                <string key="text">Natural Date and Time is a natural language date and time zone converter powered by naturaldateandtime.com which allows you to view time and date information for any major city in the world by querying in natural english.</string>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="go"/>
